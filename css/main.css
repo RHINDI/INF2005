@@ -1,0 +1,103 @@
+html, body{
+    width:100%;
+    height:100%;
+    margin:0;
+}
+body{
+    text-align: center;
+    background: url("../img/main_bg.png") center top;
+
+}
+#site{
+    display: inline-block;
+
+}
+/*--------------header style-----------------------------*/
+header{
+    width: 960px;
+    height: 167px;
+    background: url("../img/header_bg.png") repeat-x bottom;
+}
+header h1{/*To be subtituted by png*/
+/*    display: block;
+    float: left;
+    padding-left:100px;
+    margin:0;
+    color: #24261f;
+    font-weight:bold;*/
+}
+header img {
+    display: block;
+    float: left;
+    padding:0 0 0px 69px;
+}
+header nav{
+    display: block;
+    float: left;
+    height: 89px;
+    width:auto;
+    margin-top:75px;
+}
+header nav ul{
+    list-style: none; /* Remove list bullets */
+    margin:0;
+}
+header nav li{
+    float: left;
+    display: list-item;
+    margin:0;
+    padding:0;
+    border:0;
+}
+header nav a{
+    display: block;
+    border:none;
+    color:white;
+    font-size: 1.4em;
+    text-align: center;
+    width:137px;
+    text-decoration: none;
+    padding-top:60px;
+
+}
+
+a.home {
+    background: url("../img/navLogo/Home_white.png") no-repeat center top;
+}
+
+a.directeur {
+    background: url("../img/navLogo/Directeur_white.png") no-repeat center top;
+}
+
+a.contactUs {
+    background: url("../img/navLogo/ContactUs_white.png") no-repeat center top;
+}
+
+a.bottin {
+    background: url("../img/navLogo/Bottin_white.png") no-repeat center top;
+}
+a.connection {
+    background: url("../img/navLogo/Connection_white.png") no-repeat center top ;
+}
+header nav  a:hover {
+    background-color: rgba(127, 166, 111, 0.2); ;
+    color: #7fa66f;
+}
+
+/*--------------mainContent style------------------------*/
+main{
+
+    width:960px;
+    height:auto;
+    min-height:757px;
+    background-color: #7fa66f; /*To be Removed*/
+    opacity: 0.05;
+}
+/*--------------footer style-----------------------------*/
+footer{
+    width:960px;
+    height:230px;
+    border-top:solid 3px #24261f;
+    background-color: rgba(127, 166, 111, 0.05)
+}
+
