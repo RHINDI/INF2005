@@ -90,8 +90,7 @@ main{
     width:960px;
     height:auto;
     min-height:795px;
-    background-color: #7fa66f; /*To be Removed*/
-    opacity: 0.05;
+    background-color: rgba(127, 166, 111, 0.05);
 }
 /*--------------footer style-----------------------------*/
 footer{
