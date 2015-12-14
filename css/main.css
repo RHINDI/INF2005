@@ -62,6 +62,7 @@ header nav a{
 }
 
 a.home {
+
     background: url("../img/navLogo/Home_white.png") no-repeat center top;
 }
 a.directeur {
@@ -76,11 +77,14 @@ a.bottin {
 a.connection {
     background: url("../img/navLogo/Connection_white.png") no-repeat center top ;
 }
-header nav  a:hover {
+/*header nav  a:hover {
+    background-color: rgba(127, 166, 111, 0.05); ;
+    color: #7fa66f;
+}*/
+.hover{
     background-color: rgba(127, 166, 111, 0.05); ;
     color: #7fa66f;
 }
-
 /*--------------mainContent style------------------------*/
 main{
     width:960px;
@@ -116,7 +120,6 @@ padding:10px  40px;
     float: left;
     width:650px;
     height:100%;
-    /*background-color: #0d3349;*/
 
 }
 #categories a{

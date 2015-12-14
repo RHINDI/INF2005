@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/faceFont.css">
+    <script src="./js/JQuery/jquery-2.1.4.min.js"></script>
     <title>TP2 INF2005:: index</title>
 </head>
 <body>
@@ -12,12 +13,12 @@
             <a href="index.html" alt="Home"><img src="./img/24cmMidium.png" alt="24Cm"></a>
             <a href="index.html"><img id="hs_header" src="./img/HS_header.png" alt="HomeSandwich"></a>
             <nav>
-                <ul>
-                    <li><a href="index.html" class="home">Home</a></li>
-                    <li><a href="#" class="directeur">Directeur</a></li>
-                    <li><a href="./html/contactUs.html" class="contactUs">Contact Us</a></li>
-                    <li><a href="./html/bottin.html" class="bottin">Bottin</a></li>
-                    <li><a href="./html/connection.html" class="connection">Connection</a></li>
+                <ul id="nav_ul">
+                    <li id="nav_home"><a id="a_home" href="index.html" class="home">Home</a></li>
+                    <li id="nav_directeur"><a id="a_directeur" class="directeur">Directeur</a></li>
+                    <li id="nav_ContactUs"><a href="./html/contactUs.html" class="contactUs">Contact Us</a></li>
+                    <li id="nav_bottin"><a href="./html/bottin.html" class="bottin">Bottin</a></li>
+                    <li id="nav_connection"><a href="./html/connection.html" class="connection">Connection</a></li>
                 </ul>
             </nav>
         </header>
@@ -38,7 +39,7 @@
                 </div>
             </section>
             <div id="video">
-                <iframe src="https://www.youtube.com/embed/dXi1FR8VEiA"
+                <iframe id="1" class="nothing" src="https://www.youtube.com/embed/dXi1FR8VEiA"
                         frameborder="0" >
                 </iframe>
             </div>
@@ -59,5 +60,7 @@
             </div>
         </footer>
     </div> <!--End divSite-->
+    <script src="./js/main.js"></script>
+
 </body>
 </html>
