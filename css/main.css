@@ -64,15 +64,12 @@ header nav a{
 a.home {
     background: url("../img/navLogo/Home_white.png") no-repeat center top;
 }
-
 a.directeur {
     background: url("../img/navLogo/Directeur_white.png") no-repeat center top;
 }
-
 a.contactUs {
     background: url("../img/navLogo/ContactUs_white.png") no-repeat center top;
 }
-
 a.bottin {
     background: url("../img/navLogo/Bottin_white.png") no-repeat center top;
 }
@@ -86,12 +83,57 @@ header nav  a:hover {
 
 /*--------------mainContent style------------------------*/
 main{
-
     width:960px;
-    height:auto;
+    height:100%;
     min-height:795px;
     background-color: rgba(127, 166, 111, 0.05);
+    font-family: "roboto_condensedregular", Arial,SansSerif;
+    font-size: 1.3em;
+    position: relative;
+
 }
+section{
+    position: absolute;
+    float: left;
+    height:100%;
+    padding: 5px;
+
+}
+#product{
+    width:300px;
+    height:auto;
+    border-bottom:solid 3px #24261f;
+
+}
+#product img{
+    display: block;
+padding:10px  40px;
+
+}
+#video{
+    position: absolute;
+    left:310px;
+    float: left;
+    width:650px;
+    height:100%;
+    /*background-color: #0d3349;*/
+
+}
+#categories a{
+    display: block;
+    padding:5px;
+}
+#categories{
+    padding-top:10px;
+}
+
+iframe{
+    padding:100px 0 0 0;
+    width: 600px;
+    height: 500px;
+
+}
+
 /*--------------footer style-----------------------------*/
 footer{
     width:960px;

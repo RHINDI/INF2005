@@ -1,11 +1,25 @@
 main div{
     width:100%;
     text-align: left;
+    font-size: 1.3em;
+    line-height: 2em;
 }
 main p{
+    width:auto;
+    height: auto;
+    float: left;
+    padding-left:60px;
 }
 main div img{
+    display: block;
     border-bottom:10px solid #24261f;
     width:250px;
     padding:0 20px 0 20px;
+    float: left;
+    
+}
+main div:after {
+    content: "";
+    display: table;
+    clear: both;
 }
