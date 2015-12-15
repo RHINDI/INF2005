@@ -1,0 +1,88 @@
+/*-------------Global -----------------------------------*/
+html, body{
+    width:100%;
+    height:100%;
+    margin:0;
+}
+body{
+    text-align: center;
+    background: url("../img/main_bg.png") center top;
+
+}
+header{
+    width: 1120px;
+    height: 170px;
+    background: url("../img/header_bg.png") repeat-x bottom;
+    padding-top: 5px;
+}
+#site{
+    display: inline-block;
+    font-family: 'roboto_regular',Arial, sans-serif ;
+    border:2px solid #24261f
+
+}
+header img {
+    display: block;
+    float: left;
+    padding:0 0px 0px 120px;
+}
+header h1{
+    display: block;
+    float: left;
+    color: white;
+    padding:20px 200px 0 150px;
+}
+main{
+    width:100%;
+    height: 450px;
+    position: relative;
+}
+#detailsPro, #proImg{
+    position: absolute;
+    float: left;
+    height: 100%;
+    width: 50%;
+}
+#proImg{
+    left:560px;
+
+}
+footer{
+    width:100%;
+    height:100px;
+    position: relative;
+}
+
+#extra{
+    position: absolute;
+    height:100%;
+    width:50%;
+    float: left;
+    left:0;
+    text-align: left;
+    padding-left: 50px;
+    font-size: 1.2em;
+}
+#proImg img{
+    padding-top:100px;
+}
+#detailsPro{
+    text-align: justify;
+    font-size: 1.2em;
+    padding:50px ;
+}
+#detailsPro h1{
+    display: block;
+    padding-top: 50px;;
+}
+#close{
+    float: right;
+}
+input{
+    width:300px;
+    height: 50px;
+    background-color: #24261f;
+    border:none;
+    font-size: 1.8em;
+    color: white;
+}
