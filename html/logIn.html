@@ -15,7 +15,7 @@
             <h1>Authentification</h1>
         </header>
         <main>
-            <form id=ajProduit>
+            <form method="post" id="formConnect" >
                 <fieldset>
                     <legend>Authentification </legend>
                     <ol>
@@ -28,10 +28,12 @@
                             <input id=password name=password type=password required>
                         </li>
                     </ol>
-                    <button type=submit>Connection</button>
+                    <button id="closeBt" type="button" value="close">Fermer</button>
+                    <button type="submit" value="connect" >Connection</button>
                 </fieldset>
             </form>
         </main>
+        <script src="../js/logIn.js"></script>
     </div> <!--End divSite-->
 </body>
 </html>

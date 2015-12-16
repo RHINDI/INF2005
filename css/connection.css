@@ -39,7 +39,7 @@ fieldset{
  fieldset label:hover {
     cursor: pointer;
 }
- input, textarea {
+ input, textarea , select {
     background: #ffffff;
     border: none;
     -moz-border-radius: 3px;
@@ -51,6 +51,9 @@ fieldset{
     padding: 5px;
     width: 270px;
 }
+ select{
+     width:280px;
+ }
 input:not([type=submit]):focus,
 textarea:focus {
     background: #eaeaea;
@@ -76,5 +79,9 @@ textarea:focus {
      border: 1px solid #24261f;
      color: #24261f;
      cursor: pointer;
+}
+#closeBt{
+    margin:20px;
+    width:182px;
 }
 
