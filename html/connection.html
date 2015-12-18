@@ -13,6 +13,7 @@
         <header>
             <img src="../img/24cmMidium.png" alt="HomeSandwich">
             <img id="hs_header" src="../img/HS_header.png" alt="HomeSandwich">
+
         </header>
         <main>
 <!--            <fieldset>
@@ -68,9 +69,11 @@
                             <label >Image</label>
                             <select id="imagePro">
                                 <option> selectionner une image</option>
-                                <option value="../img/product/agneauchili_big.png">agneau chili</option>
+                                <option value="../img/product/agneauChili_big.png">agneau chili</option>
                                 <option value="../img/product/mozzarella_big.png">mozzarella</option>
                                 <option value="../img/product/thonOeuf_big.png">thon est oeuf</option>
+                                <option value="../img/product/serranoMozz_big.png">serrano mozzarella</option>
+                                <option value="../img/product/humus_big.png">hoummos maison</option>
                             </select>
                             <!--<input id=imagePro name=imagePro type=imagePro placeholder="choisir une image" required>-->
                         </li>
@@ -88,9 +91,10 @@
                             <textarea id=description name=description rows=5 required></textarea>
                         </li>
                     </ol>
+
                     <button type=submit>Enregistrer</button>
                 </fieldset>
-                </form>
+            </form>
             <form method="post" id="ajEmploye"  action="">
                 <fieldset>
                     <legend>Ajouter un employé</legend>
@@ -111,12 +115,16 @@
                             <label for=empFonction>Fonction</label>
                             <input id=empFonction name=empFonction type=text required>
                         </li>
+                        <li>
+                            <label for=empTel>Téléphone</label>
+                            <input id=empTel name=empTel type=text required>
+                        </li>
                     </ol>
+
                     <button type=submit>Enregistrer</button>
                 </fieldset>
                 <button id="closeBt" type="button" value="close">Fermer</button>
             </form>
-
         </main>
         <script src="../js/saveData.js"></script>
     </div> <!--End divSite-->

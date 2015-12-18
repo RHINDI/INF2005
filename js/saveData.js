@@ -8,8 +8,7 @@ function lireBdJson()
 {
     dbProd = localStorage.getItem('dbProduct');
     dbEmpl = localStorage.getItem('dbEmploye');
-    if((dbProd == "undefined")||(dbProd == null)||
-        (dbEmpl == "undefined")||(dbEmpl == null) )
+    if(!dbProd || !dbEmpl )
     {
         var product = {
             "listProduct":[]
@@ -29,33 +28,36 @@ function lireBdJson()
     }
 }
 
-function ajoutProduit()
+function ajoutProduit(e)
 {
     var nom = $('#name').val();
-    var prix = $("#prix").val();
     var image = $("#imagePro").val();
     var categorie = $("#categoriePro").find(":selected").text();
     var desc = $("#description").val();
+    var prix = $("#prix").val() ;
 
-    if((nom == "undefined")||(nom == null)||
-        (prix == "undefined")||(prix == null) ||
-        (image == "undefined")||(image == null) ||
-        (categorie == "undefined")||(categorie == null)
-        (desc == "undefined")||(desc == null))
+    if(!nom || !image || !categorie || !desc|| !prix )
     {
         alert("vous devait remplire tous les champs SVP!!!!");
         return(false);
     }
+
+    if(prix.length > 3 || isNaN(parseFloat(prix)))
+    {
+        alert("Erreur :: le format du prix ==> 0.00 ou 0 !!!!");
+        return(false);
+    }
     var jsonObject = {
         "nom":nom,
-        "prix":prix,
+        "prix":prix + " $",
         "image":image,
         "proCategorie":categorie,
         "description":desc
 
     };
-    dbProd.listProduct.push(jsonObject);//ajout dans le tableau des description
+    dbProd.listProduct.push(jsonObject);
     localStorage.setItem('dbProduct', JSON.stringify(dbProd));
+
     return(true);
 }
 function ajoutEmploye()
@@ -64,12 +66,9 @@ function ajoutEmploye()
     var prenom = $("#empPrenom").val();
     var email = $("#empEmail").val();
     var fonction = $("#empFonction").val();
+    var tel =$("empTel").val();
 
-     if((nom == "undefined")||(nom == null)||
-     (prenom == "undefined")||(prenom == null) ||
-     (email == "undefined")||(email == null) ||
-     (fonction == "undefined")||(fonction == null)
-     ){
+     if(!nom || !prenom || !email || !fonction || !tel){
      alert("vous devait remplire tous les champs SVP!!!!");
      return(false);
      }
@@ -78,19 +77,21 @@ function ajoutEmploye()
         "nom":nom,
         "prenom":prenom,
         "email":email,
-        "fonction":fonction
+        "fonction":fonction,
+        "tel":tel
     };
     dbEmpl.listEmploye.push(jsonObject);
     localStorage.setItem('dbEmploye', JSON.stringify(dbEmpl));
+
     return(true);
 }
 
 $(document).ready(function()
 {
     lireBdJson();
-    $("#ajProduit").submit( function()
+    $("#ajProduit").submit( function(e)
     {
-        return ajoutProduit();
+        return ajoutProduit(e);
     });
     $("#ajEmploye").submit( function()
     {

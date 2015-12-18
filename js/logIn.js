@@ -1,50 +1,43 @@
-var dbLog= null;
-function lireBdJson()
-{
-    dbLog= localStorage.getItem('dbLogin');
 
-    if( dbLog == "undefined" || dbLog == null )
-    {
-           var user={
-            "listUsers":[]
-        };
-        var objetUser={
-            "user":"admin",
-            "password":"pass",
-        };
-        user.listUsers.push(objetUser);
-        localStorage.setItem('dbLogin', JSON.stringify(user));
-        dbLog = user;
-    }
-    else{
-        dbLog=JSON.parse(dbLog);
-    }
-}
+var dbLog;
 
 function userLogin(){
 
-    var username = $("#username").val();
-    var pwd = $("#password").val();
+    dbLog= localStorage.getItem('dbLogin');
+
+    if( !dbLog)
+    {
+        alert('Erreur:: base de donnee non accesible..!')
+        return (false);
+    }else{
+        dbLog=JSON.parse(dbLog);
+
+    }
+    var username = $('#username').val();
+    var pwd = $('#password').val();
 
     var users = dbLog.listUsers[0];
 
-    if(username == users["user"] && pwd == users["password"]){
-        window.open("./connection.html","Ajouter donne");
-        sessionStorage.setItem("connecte","connecte");
+    if(username == users['user'] && pwd == users['password']){
+        window.open('./connection.html','Ajouter donne');
+        sessionStorage.setItem('admin','Inf2005');
         this.closeWindow();
     }else{
         sessionStorage.removeItem('connecte');
     }
-};
+}
+
 function closeWindow(){
     window.close();
-};
+}
+
 $(document).ready(function(){
-    lireBdJson();
-    $("#formConnect").submit( function(){
+
+    $('#formConnect').submit( function(){
         return userLogin();
     });
-// Close current windows
+
+
     $('#closeBt').click(function() {
         closeWindow();
         });
