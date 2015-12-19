@@ -1,0 +1,25 @@
+{
+"listDirecteurs":[
+
+  {   "nom":"Robet",
+    "prenom":"proulx",
+    "dateDebut":"2013",
+    "dateFin":"2015",
+    "imag":"../img/rectors/Robert_Proulx.png"
+  },
+  {   "nom":"Corbo",
+    "prenom":"Claude",
+    "dateDebut":"2008",
+    "dateFin":"2013",
+    "imag":"../img/rectors/Claude_Corbo.png"
+
+  },
+  {   "nom":"Danielle",
+      "prenom":"Laberge",
+      "dateDebut":"2006",
+      "dateFin":"2008",
+      "imag":"../img/rectors/Danielle_Laberge.png"
+
+  }
+]
+}
