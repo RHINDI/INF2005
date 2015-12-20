@@ -58,7 +58,8 @@ function ajoutProduit(e)
     dbProd.listProduct.push(jsonObject);
     localStorage.setItem('dbProduct', JSON.stringify(dbProd));
 
-    return(true);
+    msgConfiramtion('#msgProd', 'le produit ', nom);
+
 }
 function ajoutEmploye()
 {
@@ -66,7 +67,7 @@ function ajoutEmploye()
     var prenom = $("#empPrenom").val();
     var email = $("#empEmail").val();
     var fonction = $("#empFonction").val();
-    var tel =$("empTel").val();
+    var tel  = $("#empTel").val();
 
      if(!nom || !prenom || !email || !fonction || !tel){
      alert("vous devait remplire tous les champs SVP!!!!");
@@ -83,7 +84,16 @@ function ajoutEmploye()
     dbEmpl.listEmploye.push(jsonObject);
     localStorage.setItem('dbEmploye', JSON.stringify(dbEmpl));
 
-    return(true);
+    msgConfiramtion('#msgEmpl', 'l\'employé', nom);
+
+}
+
+function msgConfiramtion(id,type,nom)
+{
+        $(id).append(type + ' ' + nom + ' a été ajouter');
+        setTimeout(function() {
+            $(id).remove();}, 3000);
+
 }
 
 $(document).ready(function()
@@ -91,11 +101,11 @@ $(document).ready(function()
     lireBdJson();
     $("#ajProduit").submit( function(e)
     {
-        return ajoutProduit(e);
+         ajoutProduit(e);
     });
     $("#ajEmploye").submit( function()
     {
-        return ajoutEmploye();
+         ajoutEmploye();
     });
     $('#closeBt').click(function()
     {

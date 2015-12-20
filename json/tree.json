@@ -1,0 +1,16 @@
+[
+  {"id":"afri","parent":"#","text":"Afrique"},
+  {"id":"amer","parent":"#","text":"Amérique"},
+  {"id":"asie","parent":"#","text":"Asie"},
+  {"id":"euro","parent":"#","text":"Europ"},
+  {"id":"ocea","parent":"#","text":"Océanie"},
+  {"id":"ca","parent":"amer","text":"Canada"},
+  {"id":"fr","parent":"euro","text":"France"},
+  {"id":"jp","parent":"asie","text":"Japon"},
+  {"id":"cd","parent":"afri","text":"RD Congo"},
+  {"id":"be","parent":"euro","text":"Belgique"},
+  {"id":"qc","parent":"ca","text":"Québec"},
+  {"id":"mtl","parent":"qc","text":"Montreal"},
+  {"id":"fld","parent":"be","text":"Flandre"},
+  {"id":"snv","parent":"fld","text":"Anvers"}
+]

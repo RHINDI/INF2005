@@ -34,16 +34,20 @@ function getTheElement()
             $('#proImg img').attr('src',image);
             $('#proImg img').attr('alt',name);
 
-
             break;
         }
     }
+}
 
-
+function animationImag()
+{
+   /* $("#proImg").animate({left: "+=500"}, 2000);
+    $("#proImg").animate({left: "-=500"}, 1000);*/
+    $("#proImg").slideDown(); //.animate({left: "-=500"}, 1000);
 }
 
 $(document).ready(function(){
-    // Close current windows
+
     $('#closeBt').click(
         function (){
             window.close();
@@ -51,4 +55,5 @@ $(document).ready(function(){
 
     readLocalDB();
     getTheElement();
+    animationImag();
 });

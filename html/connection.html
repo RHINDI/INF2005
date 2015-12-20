@@ -16,43 +16,6 @@
 
         </header>
         <main>
-<!--            <fieldset>
-                <legend>Ajouter un produit : </legend>
-            <form id="productForm">
-                <label for="productForm">Nom         : </label>
-                <input type="text"><br>
-                <label for="productForm">Prix        : </label>
-                <input type="text"><br>
-                <label for="productForm">Image       : </label>
-                <input type="text"><br>
-                <label for="productForm">Categorie   : </label>
-                <input type="text"><br>
-                <label for="productForm">Discription : </label>
-                <textarea name="comments" id="comments" cols="32" rows="7"></textarea>
-                <p>
-                    <input type="submit" value="Enregistrer" />
-                </p>
-
-            </form>
-                </fieldset>
-            <fieldset>
-                <legend> Ajouter un employé : </legend>
-
-                <form id="employeForm">
-                <label for="productForm">Nom         : </label>
-                <input type="text"><br>
-                <label for="productForm">Prénom        : </label>
-                <input type="text"><br>
-                <label for="productForm">Courriel       : </label>
-                <input type="text"><br>
-                <label for="productForm">Fonction   : </label>
-                <input type="text"><br>
-                    <p>
-                        <input type="submit" value="Enregistrer" />
-                    </p>
-
-                </form>
-                </fieldset>-->
             <form id=ajProduit method="post"   action="">
                 <fieldset>
                     <legend>Ajouter un produit </legend>
@@ -81,9 +44,9 @@
                             <label >Categorie</label>
                             <select id="categoriePro">
                                 <option> selectionner une categorie</option>
-                                <option >sandwich</option>
-                                <option >salade</option>
-                                <option >boisont</option>
+                                <option >Sandwich</option>
+                                <option >Salade</option>
+                                <option >Boisont</option>
                             </select>
                         </li>
                         <li>
@@ -91,11 +54,11 @@
                             <textarea id=description name=description rows=5 required></textarea>
                         </li>
                     </ol>
-
+                    <p id="msgProd"></p>
                     <button type=submit>Enregistrer</button>
                 </fieldset>
             </form>
-            <form method="post" id="ajEmploye"  action="">
+            <form method="post" id="ajEmploye"  action="" >
                 <fieldset>
                     <legend>Ajouter un employé</legend>
                     <ol>
@@ -109,7 +72,7 @@
                         </li>
                         <li>
                             <label for=empEmail>Courriel</label>
-                            <input id=empEmail name=empEmail type=text placeholder="example@domain.com" required>
+                            <input id=empEmail name=empEmail pattern=".+@.+" type=text placeholder="example@domain.com" required>
                         </li>
                         <li>
                             <label for=empFonction>Fonction</label>
@@ -117,10 +80,10 @@
                         </li>
                         <li>
                             <label for=empTel>Téléphone</label>
-                            <input id=empTel name=empTel type=text required>
+                            <input id=empTel name=empTel type=text  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                         </li>
                     </ol>
-
+                    <p id="msgEmpl"></p>
                     <button type=submit>Enregistrer</button>
                 </fieldset>
                 <button id="closeBt" type="button" value="close">Fermer</button>

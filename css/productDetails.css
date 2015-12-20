@@ -45,7 +45,6 @@ main{
 }
 #proImg{
     left:560px;
-
 }
 footer{
     width:100%;
@@ -65,6 +64,7 @@ footer{
 }
 #proImg img{
     padding-top:100px;
+
 }
 #detailsPro{
     text-align: justify;

@@ -85,3 +85,8 @@ textarea:focus {
     width:182px;
 }
 
+#msgProd, #msgEmpl{
+    color: #24261f;
+
+}
+
